@@ -1,0 +1,8 @@
+C:\Users\alex.gil-pareja.ext\Documents\Inetum\Proj\HospitalManagement\GestionHospitalAPI\obj\Debug\net8.0\GestionHospitalAPI.csproj.AssemblyReference.cache
+C:\Users\alex.gil-pareja.ext\Documents\Inetum\Proj\HospitalManagement\GestionHospitalAPI\obj\Debug\net8.0\GestionHospitalAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alex.gil-pareja.ext\Documents\Inetum\Proj\HospitalManagement\GestionHospitalAPI\obj\Debug\net8.0\GestionHospitalAPI.AssemblyInfoInputs.cache
+C:\Users\alex.gil-pareja.ext\Documents\Inetum\Proj\HospitalManagement\GestionHospitalAPI\obj\Debug\net8.0\GestionHospitalAPI.AssemblyInfo.cs
+C:\Users\alex.gil-pareja.ext\Documents\Inetum\Proj\HospitalManagement\GestionHospitalAPI\obj\Debug\net8.0\GestionHospitalAPI.csproj.CoreCompileInputs.cache
+C:\Users\alex.gil-pareja.ext\Documents\Inetum\Proj\HospitalManagement\GestionHospitalAPI\obj\Debug\net8.0\GestionHospitalAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\alex.gil-pareja.ext\Documents\Inetum\Proj\HospitalManagement\GestionHospitalAPI\obj\Debug\net8.0\GestionHospitalAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\alex.gil-pareja.ext\Documents\Inetum\Proj\HospitalManagement\GestionHospitalAPI\obj\Debug\net8.0\GestionHospitalAPI.sourcelink.json
