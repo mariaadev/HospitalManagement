@@ -1,1 +1,173 @@
-<p>Camas</p>
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión de Camas</title>
+    <style>
+      .form-container {
+        display: none;
+      }
+      .form-container.active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="camas-container">
+      <h2>Gestión de Camas</h2>
+      <button class="add-btn" onclick="showAddBedForm()">Añadir Cama</button>
+      <table>
+        <thead>
+          <tr>
+            <th>Ubicación</th>  
+            <th>Estado</th>
+            <th>Tipo</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="camas-list">
+          <tr>
+            <td>Habitación 101</td>
+            <td>Disponible</td>
+            <td>Individual</td>
+            <td>
+              <button class="edit-btn" onclick="editBed('Habitación 101')">
+                Editar
+              </button>
+              <button class="delete-btn" onclick="deleteBed('Habitación 101')">
+                Eliminar
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>Habitación 102</td>
+            <td>Ocupada</td>
+            <td>Doble</td>
+            <td>
+              <button class="edit-btn" onclick="editBed('Habitación 102')">
+                Editar
+              </button>
+              <button class="delete-btn" onclick="deleteBed('Habitación 102')">
+                Eliminar
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>Habitación 103</td>
+            <td>En limpieza</td>
+            <td>Individual</td>
+            <td>
+              <button class="edit-btn" onclick="editBed('Habitación 103')">
+                Editar
+              </button>
+              <button class="delete-btn" onclick="deleteBed('Habitación 103')">
+                Eliminar
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>Habitación 104</td>
+            <td>Disponible</td>
+            <td>Doble</td>
+            <td>
+              <button class="edit-btn" onclick="editBed('Habitación 104')">
+                Editar
+              </button>
+              <button class="delete-btn" onclick="deleteBed('Habitación 104')">
+                Eliminar
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>Habitación 105</td>
+            <td>Ocupada</td>
+            <td>Individual</td>
+            <td>
+              <button class="edit-btn" onclick="editBed('Habitación 105')">
+                Editar
+              </button>
+              <button class="delete-btn" onclick="deleteBed('Habitación 105')">
+                Eliminar
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div id="form-container" class="form-container">
+        <form onsubmit="saveBed(event)">
+          <div class="form-group">
+            <label for="ubicacion">Ubicación</label>
+            <input type="text" id="ubicacion" name="ubicacion" required />
+          </div>
+          <div class="form-group">
+            <label for="estado">Estado</label>
+            <select id="estado" name="estado" required>
+              <option value="Disponible">Disponible</option>
+              <option value="Ocupada">Ocupada</option>
+              <option value="En limpieza">En limpieza</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="tipo">Tipo</label>
+            <input type="text" id="tipo" name="tipo" required />
+          </div>
+          <button type="submit" class="save-btn">Guardar</button>
+          <button type="button" class="cancel-btn" onclick="cancel()">
+            Cancelar
+          </button>
+        </form>
+      </div>
+    </div>
+ 
+    <script>
+      function showAddBedForm() {
+        document.getElementById("form-container").classList.add("active");
+      }
+ 
+      function editBed(ubicacion) {
+        // Lógica para editar una cama (mostrar el formulario con datos de la cama a editar)
+        showAddBedForm();
+        // Rellenar el formulario con los datos de la cama correspondiente
+        // Esto sería más complejo en una aplicación real, probablemente implicando la búsqueda de la cama por ubicación y llenado del formulario con esos datos
+      }
+ 
+      function deleteBed(ubicacion) {
+        // Lógica para eliminar una cama
+        const row = document.querySelector(
+          `#camas-list tr td:first-child[text="${ubicacion}"]`
+        ).parentNode;
+        row.remove();
+      }
+ 
+      function saveBed(event) {
+        event.preventDefault();
+        // Lógica para guardar una cama nueva o editada
+        const ubicacion = document.getElementById("ubicacion").value;
+        const estado = document.getElementById("estado").value;
+        const tipo = document.getElementById("tipo").value;
+        // Agregar o actualizar la cama en la lista (esto se simplifica aquí)
+        // En una aplicación real, aquí se manejaría la lógica para determinar si es una nueva cama o una cama existente
+        const newRow = `<tr>
+<td>${ubicacion}</td>
+<td>${estado}</td>
+<td>${tipo}</td>
+<td>
+<button class="edit-btn" onclick="editBed('${ubicacion}')">Editar</button>
+<button class="delete-btn" onclick="deleteBed('${ubicacion}')">Eliminar</button>
+</td>
+</tr>`;
+        document.getElementById("camas-list").innerHTML += newRow;
+        cancel();
+      }
+ 
+      function cancel() {
+        document.getElementById("form-container").classList.remove("active");
+        document.getElementById("ubicacion").value = "";
+        document.getElementById("estado").value = "Disponible";
+        document.getElementById("tipo").value = "";
+      }
+    </script>
+  </body>
+</html>
+ 
