@@ -1,0 +1,88 @@
+.footer {
+    background-color: #343a40;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+  }
+  
+  .footer-section h3 {
+    margin-bottom: 15px;
+  }
+  
+  .footer-section p, .footer-section ul, .footer-section a {
+    color: white;
+    text-decoration: none;
+    line-height: 1.6;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-bottom {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 0.8rem;
+  }
+  
+  .footer-brand img {
+    width: 130px;
+}
+
+.map img {
+    width: 166px;
+    height: 115px;
+    flex-shrink: 0;
+    border-radius: 10px;
+}
+
+.links ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin: 0px;
+    font-size: 0.8rem;
+    padding: 10px;
+}
+
+p {
+    margin: 0px;
+}
+address {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    font-size: 0.7rem;
+    padding: 10px;
+}
+
+address h5 {
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+div {
+    padding:0px;
+}

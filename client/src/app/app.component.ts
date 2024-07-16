@@ -7,10 +7,11 @@ import { CamasComponent } from './camas/camas.component';
 import { PacientesComponent } from './pacientes/pacientes.component';
 import { IngresosComponent } from './ingresos/ingresos.component';
 import { ExpedientesComponent } from './expedientes/expedientes.component';
+import { FooterComponent } from './footer/footer.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, RouterLinkActive, NavbarComponent,InicioComponent,HabitacionesComponent,CamasComponent,PacientesComponent,IngresosComponent,ExpedientesComponent],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, NavbarComponent,InicioComponent,HabitacionesComponent,CamasComponent,PacientesComponent,IngresosComponent,ExpedientesComponent,FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
