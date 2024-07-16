@@ -48,7 +48,7 @@ body {
 
 .services-container {
     width: 950px;
-    height: 500px;
+    height: 300px;
     flex-shrink: 0;
     position: relative;
     top: -50px; 

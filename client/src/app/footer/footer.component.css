@@ -1,9 +1,11 @@
+
 .footer {
-    background-color: #343a40;
-    color: white;
+    background-color: #D9D9D9;
+    color: black;
     padding: 10px 0;
     text-align: center;
     flex-shrink: 0;
+
   }
   
   .footer-content {
@@ -17,7 +19,6 @@
   .footer-section {
     flex: 1;
     min-width: 200px;
-    max-width: 250px;
   }
   
   .footer-section h3 {
@@ -25,7 +26,6 @@
   }
   
   .footer-section p, .footer-section ul, .footer-section a {
-    color: white;
     text-decoration: none;
     line-height: 1.6;
   }
@@ -35,25 +35,30 @@
     padding: 0;
   }
   
-  .footer-section ul li {
-    margin-bottom: 10px;
-  }
+
   
   .footer-bottom {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
   
   .footer-brand img {
-    width: 130px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 150px;
+    margin-left: 16px;
 }
 
 .map img {
-    width: 166px;
-    height: 115px;
+    width: 150px;
+    height: 100px;
     flex-shrink: 0;
     border-radius: 10px;
+}
+
+.map {
+    display: flex;
+    justify-content: flex-start;
 }
 
 .links ul {
@@ -62,8 +67,8 @@
     justify-content: center;
     align-items: start;
     margin: 0px;
-    font-size: 0.8rem;
-    padding: 10px;
+    font-size: 0.7rem;
+    font-weight: bold;
 }
 
 p {
@@ -75,12 +80,13 @@ address {
     text-align: start;
     font-size: 0.7rem;
     padding: 10px;
+    margin: 0px;
 }
 
 address h5 {
-    font-size: 1rem;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    font-size: 0.7rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 div {
