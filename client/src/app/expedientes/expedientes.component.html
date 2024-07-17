@@ -1,1 +1,104 @@
-<p>Expedientes</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Historial de Altas</title>
+    <link rel="stylesheet" href="expedientes.component.css">
+</head>
+<body>
+    <div class="registros-container">
+        <h2>Historial de Altas</h2>
+
+        <div class="cont-container">
+            <button class="add-btn" onclick="showAddRegistroForm()">Añadir Registro</button>
+            <div class="buscador">
+                <input type="text" id="search-input" placeholder="Buscar...">
+                <button type="button" id="search-btn">Buscar</button>
+            </div>
+        </div>
+
+        <table id="registros-list">
+            <thead>
+                <tr>
+                    <th>ID_Historial</th>
+                    <th>ID_Paciente</th>
+                    <th>Fecha_Alta</th>
+                    <th>Diagnóstico</th>
+                    <th>Tratamiento</th>
+                    <th>
+                        <select id="sort-by">
+                            <option value="Ordenar">Ordenar por...</option>
+                            <option value="ID_Historial">ID_Historial</option>
+                            <option value="ID_Paciente">ID_Paciente</option>
+                            <option value="Fecha_Alta">Fecha_Alta</option>
+                            <option value="Diagnóstico">Diagnóstico</option>
+                            <option value="Tratamiento">Tratamiento</option>
+                        </select>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1234</td>
+                    <td>5678</td>
+                    <td>2024-07-16</td>
+                    <td>Example Diagnosis</td>
+                    <td>Example Treatment</td>
+                    <td>
+                        <button class="edit-btn" onclick="editRegistro(1234)">Editar</button>
+                        <button class="delete-btn" onclick="deleteRegistro(1234)">Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4567</td>
+                    <td>8901</td>
+                    <td>2024-07-15</td>
+                    <td>Another Diagnosis</td>
+                    <td>Different Treatment</td>
+                    <td>
+                        <button class="edit-btn" onclick="editRegistro(4567)">Editar</button>
+                        <button class="delete-btn" onclick="deleteRegistro(4567)">Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3852</td>
+                    <td>7413</td>
+                    <td>2024-07-14</td>
+                    <td>Third Diagnosis</td>
+                    <td>Unique Treatment</td>
+                    <td>
+                        <button class="edit-btn" onclick="editRegistro(3852)">Editar</button>
+                        <button class="delete-btn" onclick="deleteRegistro(3852)">Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div id="form-container" class="form-container">
+            <form onsubmit="saveRegistro(event)">
+                <div class="form-group">
+                    <label for="id_historial">ID_Historial</label>
+                    <input type="text" id="id_historial" name="id_historial" required>
+                </div>
+                <div class="form-group">
+                    <label for="id_paciente">ID_Paciente</label>
+                    <input type="text" id="id_paciente" name="id_paciente" required>
+                </div>
+                <div class="form-group">
+                    <label for="fecha_alta">Fecha_Alta</label>
+                    <input type="date" id="fecha_alta" name="fecha_alta" required>
+                </div>
+                <div class="form-group">
+                    <label for="diagnostico">Diagnóstico</label>
+                    <input type="text" id="diagnostico" name="diagnostico" required>
+                </div>
+                <div class="form-group">
+                    <label for="tratamiento">Tratamiento</label>
+                    <input type="text" id="tratamiento" name="tratamiento" required>
+                </div>
+                <button type="submit" class="save-btn">Guardar</button>
+                <button type="button" class="cancel-btn" onclick="cancel()">Cancelar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
