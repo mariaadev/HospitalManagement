@@ -1,1 +1,65 @@
-<p>Pacientes</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Pacientes</title>
+</head>
+<body>
+    <div class="container">
+        
+        <header>
+            <h1>Pacientes</h1>
+            <button class="add-patient">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus" viewBox="0 0 16 16">
+                <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5"/>
+              </svg>
+                Dar de alta paciente
+            </button>
+        
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar paciente por SAP">
+            <select>
+                <option>Ordenar por: Más reciente</option>
+            </select>
+        </div>
+        </header>
+        <table>
+            <thead>
+                <tr>
+                    <th>NUSS</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Sexo</th>
+                    <th>Edad</th>
+                    <th class="acciones"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1234578</td>
+                    <td>Juan</td>
+                    <td>Alberto</td>
+                    <td>H</td>
+                    <td>40 años</td>
+                    <td class="three-dots-container"><span class="three-dots">• • •</span></td>
+                </tr>
+               
+            </tbody>
+        </table>
+        <div class="pagination">
+            <button class="page-btn">&lt;</button>
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <button class="page-btn">4</button>
+            <button class="page-btn">...</button>
+            <button class="page-btn">&gt;</button>
+        </div>
+    </div>
+</body>
+</html>
