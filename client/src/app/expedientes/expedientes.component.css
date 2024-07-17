@@ -1,0 +1,147 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f4f8;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+.registros-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 900px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.registros-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+.cont-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.add-btn, .edit-btn, .delete-btn, .save-btn, .cancel-btn, #search-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.add-btn:hover, .edit-btn:hover, .delete-btn:hover, .save-btn:hover, .cancel-btn:hover, #search-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.buscador input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  margin-right: 10px;
+  transition: border-color 0.3s, transform 0.2s;
+}
+
+.buscador input:focus {
+  border-color: #007bff;
+  outline: none;
+  transform: scale(1.05);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+thead {
+  background-color: #007bff;
+  color: #fff;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.form-container {
+  display: none;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-group input, .form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s, transform 0.2s;
+}
+
+.form-group input:focus, .form-group select:focus {
+  border-color: #007bff;
+  outline: none;
+  transform: scale(1.02);
+}
+
+.save-btn, .cancel-btn {
+  margin-top: 10px;
+}
+
+.save-btn, .cancel-btn {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.save-btn:hover, .cancel-btn:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+.delete-btn {
+  background-color: #dc3545;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+  transform: translateY(-2px);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
